@@ -1,3 +1,3 @@
 # python_projects
 
-Practicing mini projects with Python.
+Refreshing Python basics and mini projects
