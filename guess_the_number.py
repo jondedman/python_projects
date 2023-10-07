@@ -1,4 +1,5 @@
 import random
+from art.number_guesser import logo
 
 EASY = {"name": "Easy", "goes": 15}
 MEDIUM = {"name": "Medium", "goes": 10}
@@ -40,6 +41,7 @@ def evaluate_guess(target, choice, turns):
         return False
 
 def run_game():
+    print(logo)
     print("Welcome to Number Guesser!")
     target = random.randint(1, 100)
     level = choose_level()
