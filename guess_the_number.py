@@ -19,30 +19,42 @@ def choose_level():
     print(f"You've chosen the {level} level.")
 
 
-def guess_number(goes, target):
-    turns = 0
+def get_user_guess():
+    while True:
+        try:
+           choice = int(input("Please choose a number between 1 and 100\n"))
+           return choice
+        except ValueError:
+            print("Please enter a valid number")
 
-    while turns < goes:
-        choice = int(input("Guess a number between 1 and 100\n"))
-        turns += 1
-        if choice == target:
-            print(f"Congratulations you guessed the number in {turns} turns!")
-            break
-        elif choice < target:
-            print("Your guess was too low")
-        elif choice > target:
-            print("Your guess was too high")
 
-    if turns == goes and choice != target:
-        print("Game over! You are out of turns")
+def evaluate_guess(target, choice, turns):
+    if choice == target:
+        print(f"Congratulations! You guessed the number {target} correctly in {turns} turns")
+        return True
+    elif choice > target:
+        print("Too high!")
+        return False
+    else:
+        print("Too low!")
+        return False
 
 def run_game():
-    print("Welcome to number guesser!")
+    print("Welcome to Number Guesser!")
     target = random.randint(1, 100)
-    print(target)
-    goes = choose_level()
-    guess_number(goes, target)
+    level = choose_level()
+    print(f"You have {level} goes to guess the number")
 
+    for turns in range(1, level + 1):
+        choice = get_user_guess()
+        if evaluate_guess(target, choice, turns):
+            break
+        else:
+            print(f"You have {level - turns} goes left")
+            print("Guess again!")
+
+    if turns == level and choice != target:
+        print(f"You are out of turns. The number was {target} Goodbye!")
 
 if __name__ == "__main__":
     run_game()
