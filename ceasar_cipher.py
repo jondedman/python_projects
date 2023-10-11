@@ -4,7 +4,6 @@ direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
 text = input("Type your message:\n").lower()
 shift = int(input("Type the shift number:\n"))
 
-#Todo-1: Create a function called 'encrypt' that takes the 'text' and 'shift' as inputs.
 
 def encrypt(text,shift):
     #Todo-2: Inside the 'encrypt' function, shift each letter of the 'text' forwards in the alphabet by the shift amount and print the encrypted text.
@@ -23,12 +22,26 @@ def encrypt(text,shift):
         new_letter = alphabet[new_position]
         cipher_text += new_letter
     print(f"The encoded text is {cipher_text}")
-        # print(f"The encoded text is {new_letter}")
 
-    ##HINT: How do you get the index of an item in a list:
-    #https://stackoverflow.com/questions/176918/finding-the-index-of-an-item-in-a-list
+def decrypt(cipher_text,shift):
+    text = ""
+    for letter in cipher_text:
+        position = alphabet.index(letter)
+        new_position = position - shift
+        # handle the case where the new_position is greater than 25 to wrap around to the beginning of the alphabet to avoid an out of bounds error
+        if position - shift < 0:
+            new_position = position - shift + 26
 
-    ##🐛Bug alert: What happens if you try to encode the word 'civilization'?🐛
+        new_letter = alphabet[new_position]
+        text += new_letter
+    print(f"The decoded text is {text}")
 
-#Todo-3: Call the encrypt function and pass in the user inputs. You should be able to test the code and encrypt a message.
-encrypt(text,shift)
+def caesar(text,shift,direction):
+    if direction == "encode":
+        encrypt(text,shift)
+    elif direction == "decode":
+        decrypt(text,shift)
+    else:
+        print("Please enter a valid direction")
+
+caesar(text,shift,direction)
