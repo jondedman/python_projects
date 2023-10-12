@@ -12,9 +12,17 @@ print(logo)
 bidders = {}
 
 def add_bidder():
-  name = input("What is your name?\n")
-  bid = int(input("What is your bid?\n"))
-  bidders[name] = bid
+    name = input("What is your name?\n")
+
+    while True:
+        bid_str = input("What is your bid?\n")
+        if bid_str.isdigit():
+            bid = int(bid_str)
+            break
+        else:
+            print("Please enter a valid numeric bid.")
+
+    bidders[name] = bid
 
 
 def highest_bidder(bidders):
