@@ -40,16 +40,14 @@ def play():
 
     # Detect collision with wall.
         if snake.head.xcor() > 280 or snake.head.xcor() < -290 or snake.head.ycor() > 290 or snake.head.ycor() < -290:
-            game_is_on = False
-            scoreboard.game_over()
+            scoreboard.reset()
+            snake.reset()
 
     # Detect collision with tail.
         for segment in snake.segments[1:]:
-            # if segment == snake.head:
-            #     pass
             if snake.head.distance(segment) < 10:
-                game_is_on = False
-                scoreboard.game_over()
+                scoreboard.reset()
+                snake.reset()
 
     start_over = screen.textinput(title="Start Over", prompt="Do you want to start over? Type 'yes' or 'no'").lower()
     if start_over == "yes":
