@@ -9,23 +9,53 @@ FONT_NAME = "Courier"
 WORK_MIN = 25
 SHORT_BREAK_MIN = 5
 LONG_BREAK_MIN = 20
+reps = 0
+timer = None
 
-# ---------------------------- TIMER RESET ------------------------------- #
+# ---------------------------- TIMER RESET
+# ------------------------------- #
+
+def reset():
+    window.after_cancel(timer)
+    canvas.itemconfig(timer_text, text="00:00")
+    title_label.config(text="Timer", fg=GREEN)
+    ticks_label.config(text="")
+    global reps
+    reps = 0
+
 
 # ---------------------------- TIMER MECHANISM ------------------------------- #
 def start_timer():
-    countdown(5*60)
+    global reps
+    reps += 1
+    if reps % 2 == 0:
+        countdown(SHORT_BREAK_MIN * 60)
+        title_label.config(text="Break", fg=RED)
+    elif reps % 8 == 0:
+        countdown(LONG_BREAK_MIN * 60)
+        title_label.config(text="Break", fg=PINK)
+    else:
+        countdown(WORK_MIN * 60)
+        title_label.config(text="Work", fg=GREEN)
+
 
 
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
 def countdown(count):
     count_mins = count // 60
     count_secs = count % 60
+    if count_secs < 10:
+        count_secs = f"0{count_secs}"
     canvas.itemconfig(timer_text, text=f"{count_mins}:{count_secs}")
     if count > 0:
-        window.after(1000, countdown, count - 1)
+        global timer
+        timer = window.after(1000, countdown, count - 1)
     else:
-        start_button.config(text="Start", command=start_timer)
+        start_timer()
+        marks = ""
+        for _ in range(reps//2):
+            marks += "✓"
+        ticks_label.config(text=marks)
 
 
 # ---------------------------- UI SETUP ------------------------------- #
@@ -41,9 +71,9 @@ canvas.grid(column=1, row=1)
 
 
 title_label = Label(text="Timer", font=(FONT_NAME, 50), fg=GREEN, bg=YELLOW)
-reset_button = Button(text="Reset", highlightthickness=0)
+reset_button = Button(text="Reset", highlightthickness=0, command=reset)
 start_button = Button(text="Start", highlightthickness=0, command=start_timer)
-ticks_label = Label(text="✓", fg=GREEN, bg=YELLOW)
+ticks_label = Label(fg=GREEN, bg=YELLOW)
 
 
 
