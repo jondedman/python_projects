@@ -1,30 +1,38 @@
 from tkinter import *
+from tkinter import messagebox
 import pandas as pd
 import os
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
-column_names = ["website", "email/username", "password"]
-password_data = pd.DataFrame(columns=column_names)
-password_data.to_csv("passwords.csv", index=False)
+# column_names = ["website", "email/username", "password"]
+# password_data = pd.DataFrame(columns=column_names)
+# password_data.to_csv("passwords.csv", index=False)
 
 def save():
+
 
     website = website_entry.get()
     email_username = email_username_entry.get()
     password = password_entry.get()
-    new_data = {
-        "website": website,
-        "email/username": email_username,
-        "password": password
-    }
-    password_data = pd.read_csv("passwords.csv")
-    password_data = pd.concat([password_data, pd.DataFrame(new_data, index=[0])])
-    password_data.to_csv("passwords.csv", index=False)
+
+    is_ok = messagebox.askokcancel(title=website, message=f"These are the details entered: \nEmail: {email_username} \nPassword: {password} \nIs it ok to save?")
+
+    if is_ok == False:
+        return
+    else:
+        new_data = {
+            "website": [website],
+            "email/username": [email_username],
+            "password": [password]
+        }
+        df = pd.DataFrame(new_data)
     website_entry.delete(0, END)
     password_entry.delete(0, END)
     website_entry.focus()
-    print(password_data)
+    df.to_csv("passwords.csv", mode="a", header=False, index=False)
+
+
 
 
 
