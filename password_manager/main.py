@@ -15,8 +15,11 @@ def save():
     website = website_entry.get()
     email_username = email_username_entry.get()
     password = password_entry.get()
-
-    is_ok = messagebox.askokcancel(title=website, message=f"These are the details entered: \nEmail: {email_username} \nPassword: {password} \nIs it ok to save?")
+    if len(website) == 0 or len(password) == 0:
+        messagebox.showinfo(title="Oops", message="Please don't leave any fields empty!")
+        return
+    else:
+        is_ok = messagebox.askokcancel(title=website, message=f"These are the details entered: \nEmail: {email_username} \nPassword: {password} \nIs it ok to save?")
 
     if is_ok == False:
         return
@@ -26,6 +29,7 @@ def save():
             "email/username": [email_username],
             "password": [password]
         }
+
         df = pd.DataFrame(new_data)
     website_entry.delete(0, END)
     password_entry.delete(0, END)
