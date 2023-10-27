@@ -1,10 +1,36 @@
 from tkinter import *
+import pandas as pd
 import os
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
+column_names = ["website", "email/username", "password"]
+password_data = pd.DataFrame(columns=column_names)
+password_data.to_csv("passwords.csv", index=False)
+
+def save():
+
+    website = website_entry.get()
+    email_username = email_username_entry.get()
+    password = password_entry.get()
+    new_data = {
+        "website": website,
+        "email/username": email_username,
+        "password": password
+    }
+    password_data = pd.read_csv("passwords.csv")
+    password_data = pd.concat([password_data, pd.DataFrame(new_data, index=[0])])
+    password_data.to_csv("passwords.csv", index=False)
+    website_entry.delete(0, END)
+    password_entry.delete(0, END)
+    website_entry.focus()
+    print(password_data)
+
+
+
 
 # ---------------------------- UI SETUP ------------------------------- #
+
 
 window = Tk()
 window.title("Password Manager")
@@ -32,7 +58,7 @@ website_label = Label(text="Website:")
 email_username_label = Label(text="Email/Username:")
 password_label = Label(text="Password:")
 
-# inputs
+# entries
 
 website_entry =Entry(width=38)
 email_username_entry = Entry(width=38)
@@ -41,7 +67,7 @@ password_entry = Entry(width=21)
 # buttons
 
 generate_button = Button(text="Generate Password")
-add_button = Button(text="Add", width=36)
+add_button = Button(text="Add", width=36, command=save)
 
 # laying out the page
 
@@ -49,9 +75,11 @@ canvas.grid(column=1, row=0)
 
 website_label.grid(column=0, row=1)
 email_username_label.grid(column=0, row=2)
+email_username_entry.insert(0, "jonathandedman@hotmail.com")
 password_label.grid(column=0, row=3)
 
 website_entry.grid(column=1, row=1, columnspan=2)
+website_entry.focus()
 email_username_entry.grid(column=1, row=2, columnspan=2)
 password_entry.grid(column=1, row=3)
 
