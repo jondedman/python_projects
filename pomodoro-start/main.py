@@ -1,4 +1,15 @@
 from tkinter import *
+import os
+
+# ---------------------------- FILE PATH ------------------------------- #
+# Get the directory where the script is located
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Specify the relative path to the image file
+rel_path = "tomato.png"
+
+# Construct the absolute file path
+abs_file_path = os.path.join(script_dir, rel_path)
 
 # ---------------------------- CONSTANTS ------------------------------- #
 PINK = "#e2979c"
@@ -64,7 +75,7 @@ window.title("Pomodoro")
 window.config(padx=100, pady=50, bg=YELLOW)
 
 canvas = Canvas(width=200, height=224, bg=YELLOW, highlightthickness=0)
-tomato_img = PhotoImage(file="./tomato.png")
+tomato_img = PhotoImage(file=abs_file_path)
 canvas.create_image(100, 112, image=tomato_img)
 timer_text = canvas.create_text(100, 130, text="00:00", fill="white", font=(FONT_NAME, 35, "bold"))
 canvas.grid(column=1, row=1)
