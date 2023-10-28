@@ -1,16 +1,24 @@
 from tkinter import *
 from tkinter import messagebox
 import pandas as pd
+import random
+import string
+import pyperclip
 import os
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
+def generate_password():
+    alphabet = list(string.printable)
+    password_list = [random.choice(alphabet) for _ in range(16)]
+    password = "".join(password_list).strip()
+    password_entry.insert(0, password)
+
+
+
 # ---------------------------- SAVE PASSWORD ------------------------------- #
-# column_names = ["website", "email/username", "password"]
-# password_data = pd.DataFrame(columns=column_names)
-# password_data.to_csv("passwords.csv", index=False)
+
 
 def save():
-
 
     website = website_entry.get()
     email_username = email_username_entry.get()
@@ -35,6 +43,8 @@ def save():
     password_entry.delete(0, END)
     website_entry.focus()
     df.to_csv("passwords.csv", mode="a", header=False, index=False)
+    messagebox.showinfo(title="Success", message="Your password has been saved and copied to clipboard!")
+    pyperclip.copy(password)
 
 
 
@@ -78,7 +88,7 @@ password_entry = Entry(width=21)
 
 # buttons
 
-generate_button = Button(text="Generate Password")
+generate_button = Button(text="Generate Password", command=generate_password)
 add_button = Button(text="Add", width=36, command=save)
 
 # laying out the page
