@@ -8,7 +8,7 @@ import os
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
 def generate_password():
-    alphabet = list(string.printable)
+    alphabet = string.ascii_letters + string.digits + "!@#$%^&*()_+-="
     password_list = [random.choice(alphabet) for _ in range(16)]
     password = "".join(password_list).strip()
     password_entry.insert(0, password)
@@ -45,6 +45,7 @@ def save():
     df.to_csv("passwords.csv", mode="a", header=False, index=False)
     messagebox.showinfo(title="Success", message="Your password has been saved and copied to clipboard!")
     pyperclip.copy(password)
+
 
 
 
