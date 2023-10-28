@@ -13,8 +13,6 @@ def generate_password():
     password = "".join(password_list).strip()
     password_entry.insert(0, password)
 
-
-
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 
 
@@ -38,22 +36,21 @@ def save():
             "password": [password]
         }
 
-        df = pd.DataFrame(new_data)
+        df = pd.DataFrame(new_data, columns=["website", "email/username", "password"])
+
     website_entry.delete(0, END)
     password_entry.delete(0, END)
     website_entry.focus()
-    df.to_csv("passwords.csv", mode="a", header=False, index=False)
+
+    if not os.path.isfile("passwords.csv"):
+        df.to_csv("passwords.csv", mode="w", header=True, index=False)
+    else:
+        df.to_csv("passwords.csv", mode="a", header=False, index=False)
     messagebox.showinfo(title="Success", message="Your password has been saved and copied to clipboard!")
     pyperclip.copy(password)
 
 
-
-
-
-
-
 # ---------------------------- UI SETUP ------------------------------- #
-
 
 window = Tk()
 window.title("Password Manager")
@@ -73,7 +70,6 @@ abs_file_path = os.path.join(script_dir, rel_path)
 # image set up
 padlock = PhotoImage(file=abs_file_path)
 canvas.create_image(100, 100, image=padlock)
-
 
 # Labels
 
