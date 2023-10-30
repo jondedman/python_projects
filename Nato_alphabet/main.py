@@ -41,9 +41,15 @@ print(nato_dict)
 #TODO 2. Create a list of the phonetic code words from a word that the user inputs.
 
 code_words = []
+def generate_phonetic():
+    word = input("Please type word to be encoded: ").upper()
+    try:
+        for letter in word:
+            code_words.append(nato_dict[letter])
+    except KeyError:
+        print("Sorry, only letters in the alphabet please.")
+        generate_phonetic()
+    else:
+        print(code_words)
 
-word = input("Please type word to be encoded: ").upper()
-for letter in word:
-    code_words.append(nato_dict[letter])
-
-print(code_words)
+generate_phonetic()
