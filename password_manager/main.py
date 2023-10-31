@@ -5,6 +5,7 @@ import random
 import string
 import pyperclip
 import os
+import json
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
 def generate_password():
@@ -21,31 +22,48 @@ def save():
     website = website_entry.get()
     email_username = email_username_entry.get()
     password = password_entry.get()
+    new_data = {
+        website: {
+            "email": email_username,
+            "password": password
+        }
+    }
     if len(website) == 0 or len(password) == 0:
         messagebox.showinfo(title="Oops", message="Please don't leave any fields empty!")
         return
+    # else:
+    #     is_ok = messagebox.askokcancel(title=website, message=f"These are the details entered: \nEmail: {email_username} \nPassword: {password} \nIs it ok to save?")
+
+    # if is_ok == False:
+    #     return
     else:
-        is_ok = messagebox.askokcancel(title=website, message=f"These are the details entered: \nEmail: {email_username} \nPassword: {password} \nIs it ok to save?")
+        with open("data.json", mode="r") as data_file:
+            # json.dump(new_data, data_file, indent=4)
+            # Reading old data
+            data = json.load(data_file)
+            # Updating old data with new data
+            data.update(new_data)
 
-    if is_ok == False:
-        return
-    else:
-        new_data = {
-            "website": [website],
-            "email/username": [email_username],
-            "password": [password]
-        }
+        with open("data.json", mode="w") as data_file:
+            # Saving updated data
+            json.dump(data, data_file, indent=4)
+        #for csv file
+        # new_data = {
+        #     "website": [website],
+        #     "email/username": [email_username],
+        #     "password": [password]
+        # }
 
-        df = pd.DataFrame(new_data, columns=["website", "email/username", "password"])
+        # df = pd.DataFrame(new_data, columns=["website", "email/username", "password"])
 
-    website_entry.delete(0, END)
-    password_entry.delete(0, END)
-    website_entry.focus()
-
-    if not os.path.isfile("passwords.csv"):
-        df.to_csv("passwords.csv", mode="w", header=True, index=False)
-    else:
-        df.to_csv("passwords.csv", mode="a", header=False, index=False)
+            website_entry.delete(0, END)
+            password_entry.delete(0, END)
+            website_entry.focus()
+# for csv file
+    # if not os.path.isfile("passwords.csv"):
+    #     df.to_csv("passwords.csv", mode="w", header=True, index=False)
+    # else:
+    #     df.to_csv("passwords.csv", mode="a", header=False, index=False)
     messagebox.showinfo(title="Success", message="Your password has been saved and copied to clipboard!")
     pyperclip.copy(password)
 
