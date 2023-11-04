@@ -1,6 +1,7 @@
 import time
 import math
 import random
+import datetime
 # Practicing each of the essential Python concepts mentioned earlier is crucial for gaining proficiency. Here are some exercises and challenges tailored to specific concepts:
 
 # 1. **Basic Syntax and Variables:**
@@ -186,7 +187,7 @@ squares = [num ** 2 for num in range(1, 11)]
 
 library = [
     {
-        "Title": "Lord of the Rings",
+        "Title": "Lord Of The Rings",
         "Author": "Tolkien",
         "Year": 1950
     },
@@ -198,9 +199,31 @@ library = [
     }
 ]
 
-print(library)
+# title_to_find = "1984"
 
+# print(choice)
 
+def search(key, term, library):
+    result = [book for book in library if book[key] == term]
+    print(f"We do have {result[0]['Title']} by {result[0]['Author']}")
+
+def user_interface(library):
+    choice = input("What would you like to search by? press T for Title, or A for Author: ").lower()
+    if choice == "t":
+        title_choice = input("Type title: ").title()
+        term = title_choice
+        key = "Title"
+    elif choice == "a":
+        author_choice = input("Type Author: ").capitalize()
+        term = author_choice
+        key = "Author"
+    else:
+        print("You need to choose between title or author before you search")
+        user_interface(library)
+
+    search(key, term, library)
+
+# user_interface(library)
 
 
 #    - Create a dictionary of students' grades and calculate the average grade.
@@ -215,7 +238,13 @@ print(library)
 
 # 12. **String Manipulation:**
 #     - Write a program that reverses a given string.
+
+name = "jon"
+reversed_name = name[::-1]
+print(reversed_name)
 #     - Implement a function to count the occurrences of a specific word in a text.
+js = name.count("j")
+print(js)
 
 # 13. **Math and Number Operations:**
 #     - Build a program to calculate the sum of all even numbers in a given range.
@@ -282,15 +311,79 @@ end_time = time.time()
 
 
 # 16. **Data Structures and Algorithms:**
-#     - Implement a stack or queue data structure.
+# this is a good resource for data structures and algorithms: https://www.geeksforgeeks.org/data-structures/
+#     - Implement a stack and a queue in Python.
+# the stack is a data structure that stores items in a last-in-first-out (LIFO) manner. This means that the last item added to the stack is the first item that can be retrieved from the stack. Think of a stack of books on a table. The last book placed on the stack is the first book that can be removed from the stack.
+
+# A program or challenge which might require a stack is one that requires you to reverse a string. You can use a stack to reverse a string by pushing each character of the string onto the stack and then popping each character off the stack to construct the reversed string.
+class Stack:
+    def __init__(self):
+        self.items = []
+
+    def push(self, item):
+        self.items.append(item)
+
+    def pop(self):
+        return self.items.pop()
+
+    def peek(self):
+        return self.items[-1]
+
+    def is_empty(self):
+        return len(self.items) == 0
+
+    def size(self):
+        return len(self.items)
+
+# The que is a data structure that stores items in a first-in-first-out (FIFO) manner. This means that the first item added to the queue is the first item that can be retrieved from the queue. Think of a queue of people waiting in line at a ticket booth. The first person in line is the first person who can buy a ticket.
+
+# A program or challenge which might require a queue is one that requires you to print the contents of a directory and its subdirectories. You can use a queue to print the contents of a directory by adding the contents of the directory to the queue and then removing each item from the queue and printing it. If the item is a directory, then you can add its contents to the queue. You can repeat this process until the queue is empty.
+
+    class Queue:
+        def __init__(self):
+            self.items = []
+
+        def enqueue(self, item):
+            self.items.insert(0, item)
+
+        def dequeue(self):
+            if not self.is_empty():
+                return self.items.pop()
+
+        def peek(self):
+            if not self.is_empty():
+                return self.items[-1].value
+
+        def is_empty(self):
+            return len(self.items) == 0
+
+        def size(self):
+            return len(self.items)
 #     - Write sorting algorithms like Bubble Sort or Quick Sort.
 
 # 17. **Time and Date Manipulation:**
 #     - Build a program that displays the current date and time.
+# now = time.strftime("%d/%m/%Y %H:%M:%S")
+now = datetime.date.today()
+print(now)
 #     - Calculate the number of days between two given dates.
+# birthday = time.strftime("11/09/1976 00:00:00")
+birthday = datetime.date(1976, 11, 5)
+print(birthday)
+elapsed = now - birthday
+print(f"Hi Mandi, {elapsed.days} days have elapsed since you were born.")
+
+vicky_at_100 = datetime.date(2073, 4, 26)
+mandi_at_100 = datetime.date(2072, 11, 5)
+# days_left = vicky_at_100 - now
+days_left = mandi_at_100 - now
+print(f"You have {days_left.days} days left...If you are lucky, sunshine, and you live to 100 years old!")
+
 
 # 18. **Regular Expressions:**
 #     - Create a program that validates email addresses using regular expressions.
+
+
 #     - Write a script that extracts all the URLs from a text using regular expressions.
 
 # 19. **Exception Handling:**
