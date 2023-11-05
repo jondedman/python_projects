@@ -6,6 +6,14 @@ import string
 import pyperclip
 import os
 import json
+
+# Create a new virtual environment using the python3 -m venv command. For example, to create a new virtual environment named venv, you can run the following command:
+
+# Activate the virtual environment using the source command and the path to the activate script in the virtual environment's bin directory. For example, to activate the venv virtual environment, you can run the following command:
+
+# After running this command, you should see the name of the virtual environment in your terminal prompt, indicating that the virtual environment is active.
+
+# Note that you will need to activate the virtual environment every time you open a new terminal window or start a new session.
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
 def generate_password():
@@ -37,16 +45,20 @@ def save():
     # if is_ok == False:
     #     return
     else:
-        with open("data.json", mode="r") as data_file:
-            # json.dump(new_data, data_file, indent=4)
-            # Reading old data
-            data = json.load(data_file)
-            # Updating old data with new data
+        try:
+            with open("data.json", mode="r") as data_file:
+                # json.dump(new_data, data_file, indent=4)
+                # Reading old data
+                data = json.load(data_file)
+                # Updating old data with new data
+        except FileNotFoundError:
+            with open("data.json", mode="w") as data_file:
+                json.dump(new_data, data_file, indent=4)
+        else:
             data.update(new_data)
-
-        with open("data.json", mode="w") as data_file:
-            # Saving updated data
-            json.dump(data, data_file, indent=4)
+            with open("data.json", mode="w") as data_file:
+                # Saving updated data
+                json.dump(data, data_file, indent=4)
         #for csv file
         # new_data = {
         #     "website": [website],
@@ -55,7 +67,7 @@ def save():
         # }
 
         # df = pd.DataFrame(new_data, columns=["website", "email/username", "password"])
-
+        finally:
             website_entry.delete(0, END)
             password_entry.delete(0, END)
             website_entry.focus()
