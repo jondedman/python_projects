@@ -2,7 +2,16 @@ import time
 import math
 import random
 import datetime
+import re
+# Open the text file in read mode
+with open("webpage.txt", "r") as file:
+    # Read the contents of the file
+    contents = file.read()
+
+# Print the contents of the file
+
 # Practicing each of the essential Python concepts mentioned earlier is crucial for gaining proficiency. Here are some exercises and challenges tailored to specific concepts:
+
 
 # 1. **Basic Syntax and Variables:**
 #    - Write a Python program to calculate the area of a rectangle.
@@ -382,10 +391,22 @@ print(f"You have {days_left.days} days left...If you are lucky, sunshine, and yo
 
 # 18. **Regular Expressions:**
 #     - Create a program that validates email addresses using regular expressions.
+def is_valid_email(email):
+    pattern = r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+    return bool(re.match(pattern, email))
+
+print(is_valid_email("jon@jon.com"))
+
 
 
 #     - Write a script that extracts all the URLs from a text using regular expressions.
+text = "jon, how are you? Are you ok jon"
 
+def urls_from_text(text):
+    pattern = r"http[s]?://(?:[a-zA-Z]|[0-9]|[$-_@.&+]|[!*\\(\\),]|(?:%[0-9a-fA-F][0-9a-fA-F]))+"
+    urls =  re.findall(pattern, text)
+    return urls
+print(urls_from_text(contents))
 # 19. **Exception Handling:**
 #     - Handle exceptions when dividing by zero, and provide appropriate error messages.
 #     - Create custom exceptions and use them in your code.
