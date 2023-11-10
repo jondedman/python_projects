@@ -6,19 +6,9 @@ import smtplib
 import os
 from dotenv import load_dotenv
 
-# create letter templates
-letters = []
-with open("letter_templates/letter_1.txt") as file:
-    letter_1 = file.read()
-    letters.append(letter_1)
-
-with open("letter_templates/letter_2.txt") as file:
-    letter_2 = file.read()
-    letters.append(letter_2)
-
-with open("letter_templates/letter_3.txt") as file:
-    letter_3 = file.read()
-    letters.append(letter_3)
+# open a random letter file
+with open(f"letter_templates/letter_{random.randint(1,3)}.txt") as file:
+    random_letter = file.read()
 
 # open birthdays.csv
 data = pandas.read_csv("birthdays.csv")
@@ -34,7 +24,6 @@ password = os.getenv("PASSWORD")
 for index, row in data.iterrows():
     if today.day == row.day and today.month == row.month:
         recipient = row["name"]
-        random_letter = random.choice(letters)
         random_letter = random_letter.replace("[NAME]", recipient)
         # 4. Send the letter generated in step 3 to that person's email address.
         with smtplib.SMTP("smtp.gmail.com") as connection:
