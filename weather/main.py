@@ -2,7 +2,7 @@ import requests
 from dotenv import load_dotenv
 import os
 import datetime as dt
-import json
+
 
 # Open the JSON file and load the data into a variable
 # with open('test_data.json') as f:
@@ -39,17 +39,45 @@ parameters = {
 
 response = requests.get(end_point, params=parameters)
 
-# print(response.status_code)
+# print(f"Connecting to openweather api with status code: {response.status_code}")
 data = response.json()
 # print(data)
 weather_slice = data['hourly'][:12]
-# print(weather_slice[0])
+# # print(weather_slice[0])
 
-
+with open('/Users/jondedman/code/jondedman/python_projects/weather/output.txt', 'w') as f:
+    f.write(f"{now} Rain report\n____________________\n")
 
 for hour_data in weather_slice:
     time = dt.datetime.fromtimestamp(hour_data['dt'])
     probability = (hour_data['pop']) * 100
     if hour_data['pop'] > 0.5 and time > now:
         time = dt.datetime.fromtimestamp(hour_data['dt'])
-        print(f"Rain at {time} with {probability}% chance")
+        description = hour_data['weather'][0]['description']
+        try:
+            with open('/Users/jondedman/code/jondedman/python_projects/weather/output.txt', 'a') as f:
+                f.write(f"Rain at {time} with {probability}% chance\n Description: {description} ☔️\n")
+        except:
+            print("An error occurred")
+
+try:
+    with open('/Users/jondedman/code/jondedman/python_projects/weather/output.txt', 'a') as f:
+        f.write(f"_______________\n{now} End of rain report\n")
+except Exception as e:
+    print(f"An error occurred: {e}")
+
+    # Twillio API
+
+#     from twilio.rest import Client
+
+# account_sid = 'AC989732fe0f057cd024128260aba869d0'
+# auth_token = '[AuthToken]'
+# client = Client(account_sid, auth_token)
+
+# message = client.messages.create(
+#   from_='+447481343542',
+#   body='Hello',
+#   to='+447932563406'
+# )
+
+# print(message.sid)
