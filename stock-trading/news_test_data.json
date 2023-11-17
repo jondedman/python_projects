@@ -1,0 +1,552 @@
+{
+	"status": "ok",
+	"totalResults": 85,
+	"articles": [
+		{
+			"title": "Elon Musk Replies to Antisemitic Post on X, Labeling It ‘The Actual Truth’",
+			"author": "Dana Hull / Bloomberg",
+			"source": { "id": "time", "name": "Time" },
+			"publishedAt": "2023-11-16T06:00:17Z",
+			"url": "https://time.com/6336123/elon-musk-antisemitic-post-x/"
+		},
+		{
+			"title": "MUSK FOR DINNER...",
+			"author": "Bloomberg News",
+			"source": { "id": "financial-post", "name": "Financial Post" },
+			"publishedAt": "2023-11-15T00:07:37Z",
+			"url": "https://financialpost.com/pmn/business-pmn/musk-citis-fraser-among-the-ceos-wooing-chinas-xi-at-apec"
+		},
+		{
+			"title": "Tesla Finally Sends Out Invites For Cybertruck Delivery Event To Lucky Winners",
+			"author": "benzinga.com",
+			"source": { "id": None, "name": "Biztoc.com" },
+			"publishedAt": "2023-11-15T04:52:09Z",
+			"url": "https://biztoc.com/x/f7a412e50ea16a9e"
+		},
+		{
+			"title": "Xi Jinping says China seeks to be friends with US, wonâ\x80\x99t fight â\x80\x98Hot Warâ\x80\x99",
+			"author": "Bloomberg",
+			"source": { "id": None, "name": "Moneycontrol" },
+			"publishedAt": "2023-11-16T09:24:20Z",
+			"url": "https://www.moneycontrol.com/news/world/xi-jinping-says-china-seeks-to-be-friends-with-us-wont-fight-hot-war-11754961.html"
+		},
+		{
+			"title": "Tesla backtracks on Cybertruck's resale threat",
+			"author": "news@motorauthority.com (Viknesh Vijayenthiran), Viknesh Vijayenthiran",
+			"source": { "id": None, "name": "Motor Authority" },
+			"publishedAt": "2023-11-16T14:30:00Z",
+			"url": "https://www.motorauthority.com/news/1141470_tesla-backtracks-on-cybertruck-s-resale-threat"
+		},
+		{
+			"title": "BAIC unit applies for approval to build Xiaomi-branded EVs in China",
+			"author": None,
+			"source": { "id": None, "name": "CNA" },
+			"publishedAt": "2023-11-15T08:51:24Z",
+			"url": "https://www.channelnewsasia.com/business/baic-unit-applies-approval-build-xiaomi-branded-evs-china-3922051"
+		},
+		{
+			"title": "Elon Musk and Satya Nadella are among the CEOs lining up for face time with China’s Xi, APEC's biggest business kingmaker",
+			"author": "Thomas Black, Dina Bass, Bloomberg",
+			"source": { "id": "fortune", "name": "Fortune" },
+			"publishedAt": "2023-11-15T00:47:34Z",
+			"url": "https://fortune.com/2023/11/14/apec-summit-xi-elon-musk-tesla-satya-nadella-microsoft-san-francisco/"
+		},
+		{
+			"title": "Electric Vehicles: Soaring off Lots Despite Doubts in Demand",
+			"author": "Madison Cates",
+			"source": { "id": None, "name": "Wealthofgeeks.com" },
+			"publishedAt": "2023-11-16T15:49:23Z",
+			"url": "https://wealthofgeeks.com/ev-sales-soar/"
+		},
+		{
+			"title": "Live news: Elon Musk just one of the CEOs lining up to woo China's Xi",
+			"author": "Financial Post Staff",
+			"source": { "id": "financial-post", "name": "Financial Post" },
+			"publishedAt": "2023-11-15T12:30:20Z",
+			"url": "https://financialpost.com/news/live-news-top-business-stories-november-15-2023"
+		},
+		{
+			"title": ": Tesla’s stock on track for a 4th straight rise, but pares gains after inflation data",
+			"author": "Tomi Kilgore",
+			"source": { "id": None, "name": "MarketWatch" },
+			"publishedAt": "2023-11-15T14:22:00Z",
+			"url": "https://www.marketwatch.com/story/teslas-stock-on-track-for-a-4th-straight-rise-but-pares-gains-after-inflation-data-78c71f2e"
+		},
+		{
+			"title": "IBM pulls ads from X after Elon Musk’s incendiary comments over white pride",
+			"author": "Jon Swartz",
+			"source": { "id": None, "name": "MarketWatch" },
+			"publishedAt": "2023-11-16T22:04:15Z",
+			"url": "https://www.marketwatch.com/story/ibm-pulls-ads-from-x-after-elon-musks-incendiary-comments-over-white-pride-e69fe7b4"
+		},
+		{
+			"title": "Tesla, Inc. (NASDAQ:TSLA) Shares Purchased by Berger Financial Group Inc",
+			"author": "MarketBeat News",
+			"source": { "id": None, "name": "ETF Daily News" },
+			"publishedAt": "2023-11-15T21:02:44Z",
+			"url": "https://www.etfdailynews.com/2023/11/15/tesla-inc-nasdaqtsla-shares-purchased-by-berger-financial-group-inc/"
+		},
+		{
+			"title": "Tesla can bar US factory workers from wearing union t-shirts, court rules",
+			"author": None,
+			"source": { "id": None, "name": "Marketscreener.com" },
+			"publishedAt": "2023-11-15T13:35:30Z",
+			"url": "https://www.marketscreener.com/quote/stock/TESLA-INC-6344549/news/Tesla-can-bar-US-factory-workers-from-wearing-union-t-shirts-court-rules-45361022/"
+		},
+		{
+			"title": "Thinking about buying stock in Tesla Inc, Chevron, Theseus Pharmaceuticals, Cybin Inc, or NXU Inc.?",
+			"author": None,
+			"source": { "id": None, "name": "Marketscreener.com" },
+			"publishedAt": "2023-11-15T14:32:08Z",
+			"url": "https://www.marketscreener.com/quote/stock/CHEVRON-CORPORATION-12064/news/Thinking-about-buying-stock-in-Tesla-Inc-Chevron-Theseus-Pharmaceuticals-Cybin-Inc-or-NXU-Inc--45361720/"
+		},
+		{
+			"title": "Tesla, Inc. (NASDAQ:TSLA) Shares Acquired by Checchi Capital Advisers LLC",
+			"author": "MarketBeat News",
+			"source": { "id": None, "name": "ETF Daily News" },
+			"publishedAt": "2023-11-15T21:02:43Z",
+			"url": "https://www.etfdailynews.com/2023/11/15/tesla-inc-nasdaqtsla-shares-acquired-by-checchi-capital-advisers-llc/"
+		},
+		{
+			"title": "Court rules Tesla can block factory workers from wearing union t-shirts",
+			"author": "foxbusiness.com",
+			"source": { "id": None, "name": "Biztoc.com" },
+			"publishedAt": "2023-11-16T01:00:07Z",
+			"url": "https://biztoc.com/x/9dc8e4a1cce4736f"
+		},
+		{
+			"title": "Court rules Tesla can block factory workers from wearing union t-shirts",
+			"author": "foxbusiness.com",
+			"source": { "id": None, "name": "Biztoc.com" },
+			"publishedAt": "2023-11-16T23:12:09Z",
+			"url": "https://biztoc.com/x/d8fc6119bc258787"
+		},
+		{
+			"title": "Cetera Advisors LLC Sells 6,738 Shares of Tesla, Inc. (NASDAQ:TSLA)",
+			"author": "MarketBeat News",
+			"source": { "id": None, "name": "ETF Daily News" },
+			"publishedAt": "2023-11-15T21:02:46Z",
+			"url": "https://www.etfdailynews.com/2023/11/15/cetera-advisors-llc-sells-6738-shares-of-tesla-inc-nasdaqtsla/"
+		},
+		{
+			"title": "Tesla can bar U.S. factory workers from wearing union t-shirts, court rules",
+			"author": "theglobeandmail.com",
+			"source": { "id": None, "name": "Biztoc.com" },
+			"publishedAt": "2023-11-15T14:12:16Z",
+			"url": "https://biztoc.com/x/a9570657fa8d4534"
+		},
+		{
+			"title": "AlphaCore Capital LLC Increases Stock Position in Tesla, Inc. (NASDAQ:TSLA)",
+			"author": "MarketBeat News",
+			"source": { "id": None, "name": "ETF Daily News" },
+			"publishedAt": "2023-11-15T14:09:11Z",
+			"url": "https://www.etfdailynews.com/2023/11/15/alphacore-capital-llc-increases-stock-position-in-tesla-inc-nasdaqtsla/"
+		},
+		{
+			"title": "Tesla, Inc. (NASDAQ:TSLA) Shares Sold by Westpac Banking Corp",
+			"author": "MarketBeat News",
+			"source": { "id": None, "name": "ETF Daily News" },
+			"publishedAt": "2023-11-16T19:04:41Z",
+			"url": "https://www.etfdailynews.com/2023/11/16/tesla-inc-nasdaqtsla-shares-sold-by-westpac-banking-corp/"
+		},
+		{
+			"title": "Tesla, Inc. (NASDAQ:TSLA) Shares Sold by Fortress Wealth Group LLC",
+			"author": "MarketBeat News",
+			"source": { "id": None, "name": "ETF Daily News" },
+			"publishedAt": "2023-11-15T16:06:47Z",
+			"url": "https://www.etfdailynews.com/2023/11/15/tesla-inc-nasdaqtsla-shares-sold-by-fortress-wealth-group-llc/"
+		},
+		{
+			"title": "US Bancorp DE Boosts Holdings in Tesla, Inc. (NASDAQ:TSLA)",
+			"author": "MarketBeat News",
+			"source": { "id": None, "name": "ETF Daily News" },
+			"publishedAt": "2023-11-16T16:04:44Z",
+			"url": "https://www.etfdailynews.com/2023/11/16/us-bancorp-de-boosts-holdings-in-tesla-inc-nasdaqtsla/"
+		},
+		{
+			"title": "Tesla, Inc. (NASDAQ:TSLA) Stake Raised by Nicholas Investment Partners LP",
+			"author": "MarketBeat News",
+			"source": { "id": None, "name": "ETF Daily News" },
+			"publishedAt": "2023-11-16T19:04:41Z",
+			"url": "https://www.etfdailynews.com/2023/11/16/tesla-inc-nasdaqtsla-stake-raised-by-nicholas-investment-partners-lp/"
+		},
+		{
+			"title": "Tesla faces pressure in Sweden as workers at supplier to strike",
+			"author": None,
+			"source": { "id": None, "name": "Marketscreener.com" },
+			"publishedAt": "2023-11-15T18:12:33Z",
+			"url": "https://www.marketscreener.com/quote/stock/TESLA-INC-6344549/news/Tesla-faces-pressure-in-Sweden-as-workers-at-supplier-to-strike-45363349/"
+		},
+		{
+			"title": "GM snatches key Tesla gigacasting supplier",
+			"author": None,
+			"source": { "id": None, "name": "Marketscreener.com" },
+			"publishedAt": "2023-11-15T11:00:00Z",
+			"url": "https://www.marketscreener.com/quote/stock/TESLA-INC-6344549/news/GM-snatches-key-Tesla-gigacasting-supplier-45359305/"
+		},
+		{
+			"title": "China's Xi says he support Tesla's development in the country",
+			"author": None,
+			"source": { "id": None, "name": "Marketscreener.com" },
+			"publishedAt": "2023-11-16T09:44:21Z",
+			"url": "https://www.marketscreener.com/quote/stock/TESLA-INC-6344549/news/China-s-Xi-says-he-support-Tesla-s-development-in-the-country-45371341/"
+		},
+		{
+			"title": "Tesla Walks Back Threats Of Legal Action Against Cybertruck Resellers",
+			"author": "benzinga.com",
+			"source": { "id": None, "name": "Biztoc.com" },
+			"publishedAt": "2023-11-15T04:38:06Z",
+			"url": "https://biztoc.com/x/adf02cf55ac507b3"
+		},
+		{
+			"title": "Cathie Wood Praises Tesla's Robot Army, AI Data: 'Legacy Autos Are Pulling Away'",
+			"author": "benzinga.com",
+			"source": { "id": None, "name": "Biztoc.com" },
+			"publishedAt": "2023-11-15T19:38:20Z",
+			"url": "https://biztoc.com/x/d7f09cc03386c6a7"
+		},
+		{
+			"title": "Tesla’s stock on track for a 4th straight rise, but pares gains after inflation data",
+			"author": "marketwatch.com",
+			"source": { "id": None, "name": "Biztoc.com" },
+			"publishedAt": "2023-11-15T16:02:15Z",
+			"url": "https://biztoc.com/x/f98d51e7893ea47e"
+		},
+		{
+			"title": "Tesla Cleared By Appeals Court In Pro-Union T-Shirt Ban, Upholding Company's Uniform Policy: Report",
+			"author": "benzinga.com",
+			"source": { "id": None, "name": "Biztoc.com" },
+			"publishedAt": "2023-11-15T17:34:39Z",
+			"url": "https://biztoc.com/x/473ee4a032f44785"
+		},
+		{
+			"title": "Tesla Says It Is 'Between Two Major Growth Waves,' Warns Investors Of An 'Intermediate Low-Growth Period'",
+			"author": "benzinga.com",
+			"source": { "id": None, "name": "Biztoc.com" },
+			"publishedAt": "2023-11-15T03:28:08Z",
+			"url": "https://biztoc.com/x/39770abd71faa24f"
+		},
+		{
+			"title": "Tesla Software Update Simplifies Autopilot Activation, Enhances Audio Experience For Backseat Passengers",
+			"author": "benzinga.com",
+			"source": { "id": None, "name": "Biztoc.com" },
+			"publishedAt": "2023-11-16T11:16:08Z",
+			"url": "https://biztoc.com/x/8c2bf5e745b25cc7"
+		},
+		{
+			"title": "Thinking about trading options or stock in Tesla, Apple, Alphabet, Amazon.com, or Nice Ltd?",
+			"author": None,
+			"source": { "id": None, "name": "Marketscreener.com" },
+			"publishedAt": "2023-11-16T14:32:05Z",
+			"url": "https://www.marketscreener.com/quote/stock/TESLA-INC-6344549/news/Thinking-about-trading-options-or-stock-in-Tesla-Apple-Alphabet-Amazon-com-or-Nice-Ltd-45374904/"
+		},
+		{
+			"title": "Cardinal Point Capital Management ULC Sells 15,525 Shares of Tesla, Inc. (NASDAQ:TSLA)",
+			"author": "MarketBeat News",
+			"source": { "id": None, "name": "ETF Daily News" },
+			"publishedAt": "2023-11-15T21:36:45Z",
+			"url": "https://www.etfdailynews.com/2023/11/15/cardinal-point-capital-management-ulc-sells-15525-shares-of-tesla-inc-nasdaqtsla/"
+		},
+		{
+			"title": "Tesla can bar US factory workers from wearing union t-shirts, court rules",
+			"author": "reuters.com",
+			"source": { "id": None, "name": "Biztoc.com" },
+			"publishedAt": "2023-11-15T14:20:07Z",
+			"url": "https://biztoc.com/x/467c9f272fd04267"
+		},
+		{
+			"title": "LeddarTech 任命 Chris Stewart 为首席财务官",
+			"author": "LeddarTech inc.",
+			"source": { "id": None, "name": "GlobeNewswire" },
+			"publishedAt": "2023-11-15T12:09:00Z",
+			"url": "https://www.globenewswire.com/news-release/2023/11/15/2780908/0/zh-hans/LeddarTech-%E4%BB%BB%E5%91%BD-Chris-Stewart-%E4%B8%BA%E9%A6%96%E5%B8%AD%E8%B4%A2%E5%8A%A1%E5%AE%98.html"
+		},
+		{
+			"title": "LeddarTech 任命 Chris Stewart 為財務總監",
+			"author": "LeddarTech inc.",
+			"source": { "id": None, "name": "GlobeNewswire" },
+			"publishedAt": "2023-11-15T12:09:00Z",
+			"url": "https://www.globenewswire.com/news-release/2023/11/15/2780908/0/zh-hant/LeddarTech-%E4%BB%BB%E5%91%BD-Chris-Stewart-%E7%82%BA%E8%B2%A1%E5%8B%99%E7%B8%BD%E7%9B%A3.html"
+		},
+		{
+			"title": "The Magnificent Seven add more than $200 billion to their market caps",
+			"author": "marketwatch.com",
+			"source": { "id": None, "name": "Biztoc.com" },
+			"publishedAt": "2023-11-15T07:38:13Z",
+			"url": "https://biztoc.com/x/12c2f2c849916f71"
+		},
+		{
+			"title": "John Kerry replaces Elon Musk on APEC summit program",
+			"author": None,
+			"source": { "id": None, "name": "Marketscreener.com" },
+			"publishedAt": "2023-11-16T17:48:43Z",
+			"url": "https://www.marketscreener.com/quote/stock/TESLA-INC-6344549/news/John-Kerry-replaces-Elon-Musk-on-APEC-summit-program-45376697/"
+		},
+		{
+			"title": "LeddarTech แต่งตั้ง Chris Stewart เป็นประธานเจ้าหน้าที่ฝ่ายการเงิน",
+			"author": "LeddarTech inc.",
+			"source": { "id": None, "name": "GlobeNewswire" },
+			"publishedAt": "2023-11-15T12:09:00Z",
+			"url": "https://www.globenewswire.com/news-release/2023/11/15/2780908/0/th/LeddarTech-%E0%B9%81%E0%B8%95%E0%B9%88%E0%B8%87%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87-Chris-Stewart-%E0%B9%80%E0%B8%9B%E0%B9%87%E0%B8%99%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%98%E0%B8%B2%E0%B8%99%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%AB%E0%B8%99%E0%B9%89%E0%B8%B2%E0%B8%97%E0%B8%B5%E0%B9%88%E0%B8%9D%E0%B9%88%E0%B8%B2%E0%B8%A2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%87%E0%B8%B4%E0%B8%99.html"
+		},
+		{
+			"title": "LeddarTech, 최고재무책임자로 Chris Stewart 임명",
+			"author": "LeddarTech inc.",
+			"source": { "id": None, "name": "GlobeNewswire" },
+			"publishedAt": "2023-11-15T12:09:00Z",
+			"url": "https://www.globenewswire.com/news-release/2023/11/15/2780908/0/ko/LeddarTech-%EC%B5%9C%EA%B3%A0%EC%9E%AC%EB%AC%B4%EC%B1%85%EC%9E%84%EC%9E%90%EB%A1%9C-Chris-Stewart-%EC%9E%84%EB%AA%85.html"
+		},
+		{
+			"title": "レダーテック (LeddarTech)、クリス･スチュワート (Chris Stewart) を最高財務責任者に任命",
+			"author": "LeddarTech inc.",
+			"source": { "id": None, "name": "GlobeNewswire" },
+			"publishedAt": "2023-11-15T12:09:00Z",
+			"url": "https://www.globenewswire.com/news-release/2023/11/15/2780908/0/ja/%E3%83%AC%E3%83%80%E3%83%BC%E3%83%86%E3%83%83%E3%82%AF-LeddarTech-%E3%82%AF%E3%83%AA%E3%82%B9-%E3%82%B9%E3%83%81%E3%83%A5%E3%83%AF%E3%83%BC%E3%83%88-Chris-Stewart-%E3%82%92%E6%9C%80%E9%AB%98%E8%B2%A1%E5%8B%99%E8%B2%AC%E4%BB%BB%E8%80%85%E3%81%AB%E4%BB%BB%E5%91%BD.html"
+		},
+		{
+			"title": "A hybrid just won ‘vehicle of the year.’ Here’s why the EV case has been hard to crack",
+			"author": "marketwatch.com",
+			"source": { "id": None, "name": "Biztoc.com" },
+			"publishedAt": "2023-11-16T20:36:07Z",
+			"url": "https://biztoc.com/x/d7b04d75ac0c1e3a"
+		},
+		{
+			"title": "EV startup Lucid enters lucrative SUV market with $80,000 Gravity",
+			"author": None,
+			"source": { "id": None, "name": "Marketscreener.com" },
+			"publishedAt": "2023-11-16T17:05:00Z",
+			"url": "https://www.marketscreener.com/quote/stock/TESLA-INC-6344549/news/EV-startup-Lucid-enters-lucrative-SUV-market-with-80-000-Gravity-45376404/"
+		},
+		{
+			"title": "Kia gears up for LA show with 2 concept EVs",
+			"author": None,
+			"source": { "id": None, "name": "Marketscreener.com" },
+			"publishedAt": "2023-11-16T19:05:02Z",
+			"url": "https://www.marketscreener.com/quote/stock/TESLA-INC-6344549/news/Kia-gears-up-for-LA-show-with-2-concept-EVs-45377163/"
+		},
+		{
+			"title": "ROSEN, SKILLED INVESTOR COUNSEL, Encourages XPEL, Inc. Investors to Inquire About Securities Class Action Investigation – XPEL",
+			"author": "The Rosen Law Firm PA",
+			"source": { "id": None, "name": "GlobeNewswire" },
+			"publishedAt": "2023-11-16T01:05:00Z",
+			"url": "https://www.globenewswire.com/news-release/2023/11/16/2781496/673/en/ROSEN-SKILLED-INVESTOR-COUNSEL-Encourages-XPEL-Inc-Investors-to-Inquire-About-Securities-Class-Action-Investigation-XPEL.html"
+		},
+		{
+			"title": "PodcastOne's The Dr. Gundry Podcast, Hosted by Dr. Steven Gundry, Celebrates 15 Million Lifetime Downloads",
+			"author": None,
+			"source": { "id": None, "name": "Marketscreener.com" },
+			"publishedAt": "2023-11-15T11:01:09Z",
+			"url": "https://www.marketscreener.com/quote/stock/LIVEONE-INC-42765353/news/PodcastOne-s-The-Dr-Gundry-Podcast-Hosted-by-Dr-Steven-Gundry-Celebrates-15-Million-Lifetime-Dow-45359283/"
+		},
+		{
+			"title": "LeddarTech Lantik Chris Stewart sebagai Ketua Pegawai Kewangan",
+			"author": "LeddarTech inc.",
+			"source": { "id": None, "name": "GlobeNewswire" },
+			"publishedAt": "2023-11-15T12:09:00Z",
+			"url": "https://www.globenewswire.com/news-release/2023/11/15/2780908/0/ms/LeddarTech-Lantik-Chris-Stewart-sebagai-Ketua-Pegawai-Kewangan.html"
+		},
+		{
+			"title": "LeddarTech Appoints Chris Stewart as Chief Financial Officer",
+			"author": None,
+			"source": { "id": None, "name": "Marketscreener.com" },
+			"publishedAt": "2023-11-15T05:08:02Z",
+			"url": "https://www.marketscreener.com/quote/stock/PROSPECTOR-CAPITAL-CORP-117444284/news/LeddarTech-Appoints-Chris-Stewart-as-Chief-Financial-Officer-45355062/"
+		},
+		{
+			"title": "LeddarTech Nomeia Chris Stewart como Diretor Financeiro",
+			"author": "LeddarTech inc.",
+			"source": { "id": None, "name": "GlobeNewswire" },
+			"publishedAt": "2023-11-15T12:09:00Z",
+			"url": "https://www.globenewswire.com/news-release/2023/11/15/2780908/0/pt/LeddarTech-Nomeia-Chris-Stewart-como-Diretor-Financeiro.html"
+		},
+		{
+			"title": "LeddarTech Menunjuk Chris Stewart sebagai Chief Financial Officer",
+			"author": "LeddarTech inc.",
+			"source": { "id": None, "name": "GlobeNewswire" },
+			"publishedAt": "2023-11-15T12:09:00Z",
+			"url": "https://www.globenewswire.com/news-release/2023/11/15/2780908/0/id/LeddarTech-Menunjuk-Chris-Stewart-sebagai-Chief-Financial-Officer.html"
+		},
+		{
+			"title": "LeddarTech ernennt Chris Stewart zum Chief Financial Officer",
+			"author": "LeddarTech inc.",
+			"source": { "id": None, "name": "GlobeNewswire" },
+			"publishedAt": "2023-11-15T12:09:00Z",
+			"url": "https://www.globenewswire.com/news-release/2023/11/15/2780908/0/de/LeddarTech-ernennt-Chris-Stewart-zum-Chief-Financial-Officer.html"
+		},
+		{
+			"title": "LeddarTech nombra a Chris Stewart como director financiero",
+			"author": "LeddarTech inc.",
+			"source": { "id": None, "name": "GlobeNewswire" },
+			"publishedAt": "2023-11-15T12:09:00Z",
+			"url": "https://www.globenewswire.com/news-release/2023/11/15/2780908/0/es/LeddarTech-nombra-a-Chris-Stewart-como-director-financiero.html"
+		},
+		{
+			"title": "LeddarTech Appoints Chris Stewart as Chief Financial Officer",
+			"author": "LeddarTech inc.",
+			"source": { "id": None, "name": "GlobeNewswire" },
+			"publishedAt": "2023-11-15T05:07:00Z",
+			"url": "https://www.globenewswire.com/news-release/2023/11/15/2780683/0/en/LeddarTech-Appoints-Chris-Stewart-as-Chief-Financial-Officer.html"
+		},
+		{
+			"title": "LeddarTech nomme Chris Stewart au poste de chef de la direction financière",
+			"author": "LeddarTech inc.",
+			"source": { "id": None, "name": "GlobeNewswire" },
+			"publishedAt": "2023-11-15T05:07:00Z",
+			"url": "https://www.globenewswire.com/news-release/2023/11/15/2780683/0/fr/LeddarTech-nomme-Chris-Stewart-au-poste-de-chef-de-la-direction-financi%C3%A8re.html"
+		},
+		{
+			"title": "BGF Acquires More Properties for Its Quebec Phosphate Project",
+			"author": None,
+			"source": { "id": None, "name": "Marketscreener.com" },
+			"publishedAt": "2023-11-16T20:10:02Z",
+			"url": "https://www.marketscreener.com/quote/stock/BEAUCE-GOLD-FIELDS-INC-54321077/news/BGF-Acquires-More-Properties-for-Its-Quebec-Phosphate-Project-45377436/"
+		},
+		{
+			"title": "Chinaâ\x80\x99s Xi Jinping begins first US trip in six years amid tight security",
+			"author": "Bloomberg",
+			"source": { "id": None, "name": "Moneycontrol" },
+			"publishedAt": "2023-11-15T02:10:25Z",
+			"url": "https://www.moneycontrol.com/news/world/chinas-xi-jinping-begins-first-us-trip-in-six-years-amid-tight-security-11741691.html"
+		},
+		{
+			"title": "PodcastOne (PODC) Acquires Exclusive Rights to Lost In Panama Podcast Including IP for TV/ Film",
+			"author": "PodcastOne",
+			"source": { "id": None, "name": "GlobeNewswire" },
+			"publishedAt": "2023-11-15T15:15:00Z",
+			"url": "https://www.globenewswire.com/news-release/2023/11/15/2781185/0/en/PodcastOne-PODC-Acquires-Exclusive-Rights-to-Lost-In-Panama-Podcast-Including-IP-for-TV-Film.html"
+		},
+		{
+			"title": "Talon Metals Intercepts High-Grade Nickel-Copper Mineralization in 14 New Holes Located Outside of the Tamarack Nickel Project Resource",
+			"author": None,
+			"source": { "id": None, "name": "Marketscreener.com" },
+			"publishedAt": "2023-11-16T12:35:01Z",
+			"url": "https://www.marketscreener.com/quote/stock/TALON-METALS-CORP-1409311/news/Talon-Metals-Intercepts-High-Grade-Nickel-Copper-Mineralization-in-14-New-Holes-Located-Outside-of-t-45373129/"
+		},
+		{
+			"title": "Tesla does a tango with Indian parts makers",
+			"author": "Alisha Sachdev",
+			"source": { "id": None, "name": "Livemint" },
+			"publishedAt": "2023-11-16T18:17:47Z",
+			"url": "https://www.livemint.com/companies/news/tesla-does-a-tango-with-indian-parts-makers-11700158295800.html"
+		},
+		{
+			"title": "Tesla can bar US factory workers from wearing union t-shirts, court rules",
+			"author": "Reuters",
+			"source": { "id": "the-times-of-india", "name": "The Times of India" },
+			"publishedAt": "2023-11-15T13:44:19Z",
+			"url": "https://economictimes.indiatimes.com/tech/technology/tesla-can-bar-us-factory-workers-from-wearing-union-t-shirts-court-rules/articleshow/105239277.cms"
+		},
+		{
+			"title": "View: It’s darkest before the dawn in the EV revolution",
+			"author": "Bloomberg",
+			"source": { "id": "the-times-of-india", "name": "The Times of India" },
+			"publishedAt": "2023-11-16T06:17:56Z",
+			"url": "https://economictimes.indiatimes.com/industry/renewables/view-its-darkest-before-the-dawn-in-the-ev-revolution/articleshow/105253007.cms"
+		},
+		{
+			"title": "特斯拉新招防黃牛，一年內轉售 Cybertruck 需付 5 萬美元違約金",
+			"author": "Unwire HK",
+			"source": { "id": None, "name": "Technews.tw" },
+			"publishedAt": "2023-11-15T00:10:58Z",
+			"url": "https://finance.technews.tw/2023/11/15/tesla-cybertruck-conditional-on-resale-within-one-year/"
+		},
+		{
+			"title": "Foxconn:Â\xa0TheÂ\xa0iPhone maker is now chasing EVs andÂ\xa0satellites",
+			"author": "Tim Culpan",
+			"source": { "id": None, "name": "Moneycontrol" },
+			"publishedAt": "2023-11-15T05:22:19Z",
+			"url": "https://www.moneycontrol.com/news/opinion/foxconn-the-iphone-maker-is-now-chasing-evs-and-satellites-11742521.html"
+		},
+		{
+			"title": "10 stocks of consumer companies expected to grow sales the fastest through 2025",
+			"author": "Philip van Doorn",
+			"source": { "id": None, "name": "MarketWatch" },
+			"publishedAt": "2023-11-15T16:13:00Z",
+			"url": "https://www.marketwatch.com/story/10-stocks-of-consumer-companies-expected-to-grow-sales-the-fastest-through-2025-1fab18da"
+		},
+		{
+			"title": ": Nio’s stock dives toward a 3-year low, amid downbeat outlook for China-U.S. relations",
+			"author": "Tomi Kilgore",
+			"source": { "id": None, "name": "MarketWatch" },
+			"publishedAt": "2023-11-16T15:57:00Z",
+			"url": "https://www.marketwatch.com/story/nios-stock-dives-toward-a-3-year-low-amid-downbeat-outlook-for-china-u-s-relations-e19b1333"
+		},
+		{
+			"title": "Company Close Updates: Workhorse Group Inc. stock underperforms Thursday when compared to competitors",
+			"author": "MarketWatch Automation",
+			"source": { "id": None, "name": "MarketWatch" },
+			"publishedAt": "2023-11-16T22:36:00Z",
+			"url": "https://www.marketwatch.com/data-news/workhorse-group-inc-stock-underperforms-thursday-when-compared-to-competitors-5a87b502-541ea2557560"
+		},
+		{
+			"title": "Company Close Updates: Workhorse Group Inc. stock outperforms competitors on strong trading day",
+			"author": "MarketWatch Automation",
+			"source": { "id": None, "name": "MarketWatch" },
+			"publishedAt": "2023-11-15T22:36:00Z",
+			"url": "https://www.marketwatch.com/data-news/workhorse-group-inc-stock-outperforms-competitors-on-strong-trading-day-c38ee4b8-fff062711633"
+		},
+		{
+			"title": "Company Close Updates: General Motors Co. stock outperforms competitors despite losses on the day",
+			"author": "MarketWatch Automation",
+			"source": { "id": None, "name": "MarketWatch" },
+			"publishedAt": "2023-11-16T21:56:00Z",
+			"url": "https://www.marketwatch.com/data-news/general-motors-co-stock-outperforms-competitors-despite-losses-on-the-day-f455448d-429f694baf61"
+		},
+		{
+			"title": ": A hybrid just won ‘vehicle of the year.’ Here’s why the EV case has been hard to crack.",
+			"author": "Claudia Assis",
+			"source": { "id": None, "name": "MarketWatch" },
+			"publishedAt": "2023-11-16T19:59:00Z",
+			"url": "https://www.marketwatch.com/story/a-hybrid-just-won-vehicle-of-the-year-heres-why-the-ev-case-has-been-hard-to-crack-b50a4d86"
+		},
+		{
+			"title": "Market Extra: ‘Magnificent Seven’ stocks enjoyed a blistering 2023. Here’s what it would take for that rally to spill over into 2024.",
+			"author": "Joseph Adinolfi",
+			"source": { "id": None, "name": "MarketWatch" },
+			"publishedAt": "2023-11-16T19:37:00Z",
+			"url": "https://www.marketwatch.com/story/magnificent-seven-stocks-enjoyed-a-blistering-2023-heres-what-it-would-take-for-that-rally-to-spill-over-into-2024-53b182c8"
+		},
+		{
+			"title": "MarketWatch First Take: The Grinch may steal holiday cheer from these consumer tech companies",
+			"author": "Therese Poletti",
+			"source": { "id": None, "name": "MarketWatch" },
+			"publishedAt": "2023-11-15T13:05:00Z",
+			"url": "https://www.marketwatch.com/story/the-grinch-may-steal-holiday-cheer-from-these-consumer-tech-companies-5208f26e"
+		},
+		{
+			"title": "The Tell: How much thematic exposure do stock-market investors have? Here’s what BlackRock found.",
+			"author": "Christine Idzelis",
+			"source": { "id": None, "name": "MarketWatch" },
+			"publishedAt": "2023-11-15T13:01:00Z",
+			"url": "https://www.marketwatch.com/story/how-much-thematic-exposure-do-stock-market-investors-have-heres-what-blackrock-found-f469bb9b"
+		},
+		{
+			"title": "ETF Wrap: Cathie Wood’s ARK Innovation ETF in ‘breakout mode’ after triggering bullish pattern",
+			"author": "Christine Idzelis",
+			"source": { "id": None, "name": "MarketWatch" },
+			"publishedAt": "2023-11-16T18:34:00Z",
+			"url": "https://www.marketwatch.com/story/cathie-woods-ark-innovation-etf-in-breakout-mode-after-triggering-bullish-pattern-491d360b"
+		},
+		{
+			"title": "Couiple opens The Nook bookstore on Cedar Falls' Main Street",
+			"author": "Angela Stirm-mclaughlin",
+			"source": { "id": None, "name": "WCF Courier" },
+			"publishedAt": "2023-11-16T12:28:19Z",
+			"url": "https://wcfcourier.com/news/local/business/abby-olson-brandon-conrad-nook-cedar-falls/article_3d431ad8-8260-11ee-92c8-dbe81ee6132b.html"
+		},
+		{
+			"title": "Kodak sues Tesla for using stolen technology for Autopilot",
+			"author": "ronron4693",
+			"source": { "id": None, "name": "Cleanenergyrevolution.co" },
+			"publishedAt": "2023-11-15T03:06:41Z",
+			"url": "https://cleanenergyrevolution.co/2023/11/13/kodak-sues-tesla-for-using-stolen-technology-for-autopilot/"
+		},
+		{
+			"title": "Tesla to double its components imports from India: Trade Minister",
+			"author": "Enamul Haque Renu",
+			"source": { "id": None, "name": "Sylhetmirror.com" },
+			"publishedAt": "2023-11-15T15:31:39Z",
+			"url": "https://sylhetmirror.com/2023/11/15/tesla-to-double-its-components-imports-from-india-trade-minister/"
+		}
+	]
+}
