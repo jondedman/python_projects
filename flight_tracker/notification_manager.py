@@ -2,7 +2,6 @@
 from twilio.rest import Client
 import os
 import dotenv
-import requests
 from datetime import datetime, timedelta
 from pprint import pprint
 import smtplib

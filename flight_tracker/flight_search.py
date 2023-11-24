@@ -1,9 +1,20 @@
 import requests
+import dotenv
+import os
+
+dotenv.load_dotenv()
+api_key = os.getenv('KIWI_KEY')
+
+kiwi_url = 'https://tequila-api.kiwi.com/v2/search'
+kiwi_headers = {
+    'apikey': api_key
+}
+
 
 class FlightSearch:
-    def __init__(self, api_url, headers):
-        self.api_url = api_url
-        self.headers = headers
+    def __init__(self):
+        self.api_url = kiwi_url
+        self.headers = kiwi_headers
 
     def search_flights(self, from_city, to_city, date_from, date_to):
         params = {
