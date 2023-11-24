@@ -1,8 +1,13 @@
 Traceback (most recent call last):
-  File "/Users/jondedman/code/jondedman/python_projects/weather/env/lib/python3.11/site-packages/urllib3/connection.py", line 203, in _new_conn
+  File "/Users/jondedman/code/jondedman/python_projects/weather/main.py", line 51, in <module>
+    weather_slice = data['hourly'][:12]
+                    ~~~~^^^^^^^^^^
+KeyError: 'hourly'
+Traceback (most recent call last):
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/urllib3/connection.py", line 203, in _new_conn
     sock = connection.create_connection(
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/jondedman/code/jondedman/python_projects/weather/env/lib/python3.11/site-packages/urllib3/util/connection.py", line 60, in create_connection
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/urllib3/util/connection.py", line 60, in create_connection
     for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/socket.py", line 962, in getaddrinfo
@@ -13,54 +18,186 @@ socket.gaierror: [Errno 8] nodename nor servname provided, or not known
 The above exception was the direct cause of the following exception:
 
 Traceback (most recent call last):
-  File "/Users/jondedman/code/jondedman/python_projects/weather/env/lib/python3.11/site-packages/urllib3/connectionpool.py", line 791, in urlopen
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 790, in urlopen
     response = self._make_request(
                ^^^^^^^^^^^^^^^^^^^
-  File "/Users/jondedman/code/jondedman/python_projects/weather/env/lib/python3.11/site-packages/urllib3/connectionpool.py", line 492, in _make_request
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 491, in _make_request
     raise new_e
-  File "/Users/jondedman/code/jondedman/python_projects/weather/env/lib/python3.11/site-packages/urllib3/connectionpool.py", line 468, in _make_request
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 467, in _make_request
     self._validate_conn(conn)
-  File "/Users/jondedman/code/jondedman/python_projects/weather/env/lib/python3.11/site-packages/urllib3/connectionpool.py", line 1097, in _validate_conn
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 1096, in _validate_conn
     conn.connect()
-  File "/Users/jondedman/code/jondedman/python_projects/weather/env/lib/python3.11/site-packages/urllib3/connection.py", line 611, in connect
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/urllib3/connection.py", line 611, in connect
     self.sock = sock = self._new_conn()
                        ^^^^^^^^^^^^^^^^
-  File "/Users/jondedman/code/jondedman/python_projects/weather/env/lib/python3.11/site-packages/urllib3/connection.py", line 210, in _new_conn
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/urllib3/connection.py", line 210, in _new_conn
     raise NameResolutionError(self.host, self, e) from e
-urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x110b42910>: Failed to resolve 'api.openweathermap.org' ([Errno 8] nodename nor servname provided, or not known)
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x10e89ab90>: Failed to resolve 'api.openweathermap.org' ([Errno 8] nodename nor servname provided, or not known)
 
 The above exception was the direct cause of the following exception:
 
 Traceback (most recent call last):
-  File "/Users/jondedman/code/jondedman/python_projects/weather/env/lib/python3.11/site-packages/requests/adapters.py", line 486, in send
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/requests/adapters.py", line 486, in send
     resp = conn.urlopen(
            ^^^^^^^^^^^^^
-  File "/Users/jondedman/code/jondedman/python_projects/weather/env/lib/python3.11/site-packages/urllib3/connectionpool.py", line 845, in urlopen
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 844, in urlopen
     retries = retries.increment(
               ^^^^^^^^^^^^^^^^^^
-  File "/Users/jondedman/code/jondedman/python_projects/weather/env/lib/python3.11/site-packages/urllib3/util/retry.py", line 515, in increment
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/urllib3/util/retry.py", line 515, in increment
     raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.openweathermap.org', port=443): Max retries exceeded with url: /data/3.0/onecall?lat=51.47216&lon=-0.16541&appid=30d8b2f0c7a80ab931916df36e8f310a&exclude=current%2Cminutely%2Cdaily (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x110b42910>: Failed to resolve 'api.openweathermap.org' ([Errno 8] nodename nor servname provided, or not known)"))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.openweathermap.org', port=443): Max retries exceeded with url: /data/3.0/onecall?lat=51.47216&lon=-0.16541&appid=30d8b2f0c7a80ab931916df36e8f310a&exclude=current%2Cminutely%2Cdaily (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10e89ab90>: Failed to resolve 'api.openweathermap.org' ([Errno 8] nodename nor servname provided, or not known)"))
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "/Users/jondedman/code/jondedman/python_projects/weather/main.py", line 40, in <module>
+  File "/Users/jondedman/code/jondedman/python_projects/weather/main.py", line 44, in <module>
     response = requests.get(end_point, params=parameters)
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/jondedman/code/jondedman/python_projects/weather/env/lib/python3.11/site-packages/requests/api.py", line 73, in get
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/requests/api.py", line 73, in get
     return request("get", url, params=params, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/jondedman/code/jondedman/python_projects/weather/env/lib/python3.11/site-packages/requests/api.py", line 59, in request
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/requests/api.py", line 59, in request
     return session.request(method=method, url=url, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/jondedman/code/jondedman/python_projects/weather/env/lib/python3.11/site-packages/requests/sessions.py", line 589, in request
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/requests/sessions.py", line 589, in request
     resp = self.send(prep, **send_kwargs)
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/jondedman/code/jondedman/python_projects/weather/env/lib/python3.11/site-packages/requests/sessions.py", line 703, in send
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/requests/sessions.py", line 703, in send
     r = adapter.send(request, **kwargs)
         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/jondedman/code/jondedman/python_projects/weather/env/lib/python3.11/site-packages/requests/adapters.py", line 519, in send
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/requests/adapters.py", line 519, in send
     raise ConnectionError(e, request=request)
-requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.openweathermap.org', port=443): Max retries exceeded with url: /data/3.0/onecall?lat=51.47216&lon=-0.16541&appid=30d8b2f0c7a80ab931916df36e8f310a&exclude=current%2Cminutely%2Cdaily (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x110b42910>: Failed to resolve 'api.openweathermap.org' ([Errno 8] nodename nor servname provided, or not known)"))
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.openweathermap.org', port=443): Max retries exceeded with url: /data/3.0/onecall?lat=51.47216&lon=-0.16541&appid=30d8b2f0c7a80ab931916df36e8f310a&exclude=current%2Cminutely%2Cdaily (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x10e89ab90>: Failed to resolve 'api.openweathermap.org' ([Errno 8] nodename nor servname provided, or not known)"))
+Traceback (most recent call last):
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 491, in _make_request
+    raise new_e
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 467, in _make_request
+    self._validate_conn(conn)
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 1096, in _validate_conn
+    conn.connect()
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/urllib3/connection.py", line 611, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/urllib3/connection.py", line 210, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x11020a8d0>: Failed to resolve 'api.openweathermap.org' ([Errno 8] nodename nor servname provided, or not known)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/urllib3/util/retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.openweathermap.org', port=443): Max retries exceeded with url: /data/3.0/onecall?lat=51.47216&lon=-0.16541&appid=30d8b2f0c7a80ab931916df36e8f310a&exclude=current%2Cminutely%2Cdaily (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x11020a8d0>: Failed to resolve 'api.openweathermap.org' ([Errno 8] nodename nor servname provided, or not known)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jondedman/code/jondedman/python_projects/weather/main.py", line 45, in <module>
+    response = requests.get(end_point, params=parameters)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.openweathermap.org', port=443): Max retries exceeded with url: /data/3.0/onecall?lat=51.47216&lon=-0.16541&appid=30d8b2f0c7a80ab931916df36e8f310a&exclude=current%2Cminutely%2Cdaily (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x11020a8d0>: Failed to resolve 'api.openweathermap.org' ([Errno 8] nodename nor servname provided, or not known)"))
+Traceback (most recent call last):
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/socket.py", line 962, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 790, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 491, in _make_request
+    raise new_e
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 467, in _make_request
+    self._validate_conn(conn)
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 1096, in _validate_conn
+    conn.connect()
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/urllib3/connection.py", line 611, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/urllib3/connection.py", line 210, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: <urllib3.connection.HTTPSConnection object at 0x109e9a8d0>: Failed to resolve 'api.openweathermap.org' ([Errno 8] nodename nor servname provided, or not known)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/requests/adapters.py", line 486, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/urllib3/connectionpool.py", line 844, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/urllib3/util/retry.py", line 515, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.openweathermap.org', port=443): Max retries exceeded with url: /data/3.0/onecall?lat=51.47216&lon=-0.16541&appid=30d8b2f0c7a80ab931916df36e8f310a&exclude=current%2Cminutely%2Cdaily (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x109e9a8d0>: Failed to resolve 'api.openweathermap.org' ([Errno 8] nodename nor servname provided, or not known)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/jondedman/code/jondedman/python_projects/weather/main.py", line 45, in <module>
+    response = requests.get(end_point, params=parameters)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/jondedman/code/jondedman/python_projects/weather/.venv/lib/python3.11/site-packages/requests/adapters.py", line 519, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.openweathermap.org', port=443): Max retries exceeded with url: /data/3.0/onecall?lat=51.47216&lon=-0.16541&appid=30d8b2f0c7a80ab931916df36e8f310a&exclude=current%2Cminutely%2Cdaily (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x109e9a8d0>: Failed to resolve 'api.openweathermap.org' ([Errno 8] nodename nor servname provided, or not known)"))
