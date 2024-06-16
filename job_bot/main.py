@@ -6,6 +6,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver import ActionChains
+from selenium.webdriver.support.ui import Select
 import os
 import dotenv
 from time import sleep
@@ -100,13 +101,20 @@ def close():
         pass
 
 def load_questions():
-    ''' Load the existing data'''
+    '''Loads the additional questions json into a dictionary'''
+    print("load questions")
     try:
         with open("all_questions.json", "r") as file:
-            all_questions = json.load(file)
+            # Check if the file is empty
+            if file.read().strip():
+                # If the file is not empty, seek to the beginning and load the JSON
+                file.seek(0)
+                all_questions = json.load(file)
+            else:
+                # If the file is empty, return an empty dictionary
+                all_questions = {}
     except FileNotFoundError:
         all_questions = {}
-        print(f'all questions: {all_questions}')
     return all_questions
 
 
@@ -153,11 +161,23 @@ def extract_questions():
                 print("no questions found")
                 return questions
 
+def extract_legend_questions():
+    legend_questions = []
+    legends = driver.find_elements(By.TAG_NAME, "legend")
+    print(f'legends: {legends}')
+    for legend in legends:
+        if legend.text != "":
+            print(f'legend: {legend.text}')
+            legend_questions.append(legend.text)
+    return legend_questions
 
-def save_questions(questions, all_questions):
+
+
+def save_questions(questions, all_questions, legend_questions):
     '''Saves new questions encountered to a local json. Takes a list of questions (from extract questions functions) and compares
     to a local copy of the additional questions json (from the load questions function)'''
     print("save questions")
+    questions.extend(legend_questions)
     for question in questions:
         if question not in all_questions:
             all_questions[question] = ""
@@ -170,6 +190,7 @@ def save_questions(questions, all_questions):
         json.dump(all_questions, file)
 
 def find_inputs(type):
+    print("find inputs")
     fields = driver.find_elements(By.XPATH, f"//form//input[@type='{type}']")
     for field in fields:
         label = field.find_element_by_xpath("./preceding-sibling::label")
@@ -177,15 +198,41 @@ def find_inputs(type):
         print(f"Input HTML: {field.get_attribute('outerHTML')}")
     return fields
 
+def answer_radio_buttons(all_questions):
+    print("answer radio buttons")
+    legends = driver.find_elements(By.TAG_NAME, "legend")
+    print(all_questions["Do you have a valid driver's license?\nDo you have a valid driver's license?\nRequired"])
+    for legend in legends:
+        print(f'legend: {legend.text}')
+        print("-------------------------")
+        print("test")
+        if legend.text != "" and legend.text in all_questions:
+            print(f'all questions: {all_questions[legend.text]}')
+
+        if legend.text != "" and legend.text in all_questions:
+            yes = legend.find_element(By.XPATH, "../div/label[@data-test-text-selectable-option__label='Yes']")
+            no = legend.find_element(By.XPATH, "../div/label[@data-test-text-selectable-option__label='No']")
+            if all_questions[legend.text] == "Yes":
+                yes.click()
+            elif all_questions[legend.text] == "No":
+                no.click()
+            else:
+                print("no answer found")
+        else:
+            print("no legend found")
+
+
 def answer_questions(all_questions):
     '''Takes a dictionary of questions and answers and attempts to find matching input fields for each question and
     attempts to fill them in.'''
     print("answer questions")
     form = driver.find_element(By.CSS_SELECTOR, 'form')
     question_labels = [(label, label.get_attribute('for')) for label in form.find_elements(By.CSS_SELECTOR, 'label')]
+    print(f'question labels: {question_labels}')
     for label, label_for in question_labels:
                 print(f'label: {label.text}')
                 label_for = label.get_attribute('for')
+                print(f'label for: {label_for}')
 
                 try:
                     print("trying to find input")
@@ -196,75 +243,60 @@ def answer_questions(all_questions):
                         try:
                             if input_field.get_attribute("value") != all_questions[label.text]:
                                 print("trying to fill in input")
+                                # input_field.send_keys("")
                                 input_field.send_keys(all_questions[label.text])
                         except KeyError:
                             print("no answer found")
-                            pass
+
                     else:
                         print("input already filled in")
-                        pass
+
 
                 except NoSuchElementException:
                     print("no input found")
-                    try:
-                        print("trying to find textarea")
-                        textarea = driver.find_element(By.ID, label_for)
-                        print(f'Question: {label.text}')
-                        print(f'Input HTML: {textarea.get_attribute("outerHTML")}')
-                        textarea.send_keys(all_questions[label.text])
 
-                    except NoSuchElementException:
-                        print("no textarea found")
-                        try:
-                            print("trying to find select")
-                            select = driver.find_element(By.ID, label_for)
-                            print(f'Question: {label.text}')
-                            print(f'Input HTML: {select.get_attribute("outerHTML")}')
-                            if all_questions[label.text] == "yes":
-                                try:
-                                    print("trying to find yes")
-                                    yes = select.find_element(By.XPATH, f".//option[contains(text(), \"{all_questions[label.text]}\")]")
-                                    print(f'answer: {yes}')
-                                    yes.click()
+                # try:
+                #     print("trying to find textarea")
+                #     sleep(2)
+                #     textarea = driver.find_element(By.ID, label_for)
+                #     answer = all_questions.get(label.text)
+                #     if answer is not None:
+                #         textarea.send_keys(answer)
+                #     else:
+                #         print(f"No answer found for label {label.text}")
+                # except NoSuchElementException:
+                #     print("no textarea found")
 
-                                except:
-                                    print("trying to find no")
-                                    no = select.find_element(By.XPATH, f".//option[contains(text(), 'No')]")
-                                    print(f'answer: {no}')
-                                    no.click()
 
-                        except NoSuchElementException:
-                            print("no select found")
-                            try:
-                                print("trying to find radio button")
-                                sleep(2)
-                                wait = WebDriverWait(driver, 10)
-                                if all_questions[label.text] == "yes":
-                                    print("trying to find yes")
-                                    # Find the fieldset containing the question
-                                    fieldset = driver.find_element(By.CSS_SELECTOR, f"fieldset:has(> legend > span:contains('{label.text}'))")
-                                    print(f'fieldset: {fieldset}')
+                # try:
+                #     print("trying to find select")
+                #     select_element = driver.find_element(By.ID, label_for)
+                #     if select_element.tag_name == "select":
+                #         select = Select(select_element)
+                #         answer = all_questions.get(label.text)
+                #         if answer is not None:
+                #             print(f"Selecting option: {answer}")
+                #             select.select_by_visible_text(answer)
+                #         else:
+                #             print(f"No answer found for label {label.text}")
+                #     else:
+                #         print("element is not a select")
+                # except NoSuchElementException:
+                #     print("no select found")
 
-                                    # Find the Yes radio button within the fieldset
-                                    yes = fieldset.find_element(By.CSS_SELECTOR, 'input[data-test-text-selectable-option__input="Yes"]')
+    answer_radio_buttons(all_questions)
+                # try:
+                #     print("trying to find radio button")
+                #     sleep(2)
+                #     option_text = all_questions[label.text]
+                #     radio_button = driver.find_element(By.CSS_SELECTOR, f'input[data-test-text-selectable-option__input="{option_text}"]')
+                #     radio_button.click()
+                # except NoSuchElementException:
+                #     print("no radio button found")
 
-                                    print(f'answer: {yes}')
-                                    yes.click()
-                                elif all_questions[label.text] == "no":
 
-                                    print("trying to find no")
-                                    # Find the fieldset containing the question
-                                    fieldset = driver.find_element(By.CSS_SELECTOR, f"fieldset:has(> legend > span:contains('{label.text}'))")
 
-                                    # Find the Yes radio button within the fieldset
-                                    no = fieldset.find_element(By.CSS_SELECTOR, 'input[data-test-text-selectable-option__input="No"]')
 
-                                    print(f'answer: {no}')
-                                    no.click()
-
-                            except NoSuchElementException:
-                                print("no radio button found")
-                                pass
 
 
 # This function needs to have the answering of questions refactored into a new function.
@@ -282,14 +314,18 @@ def additional_questions():
             all_questions = load_questions()
             print(f'all questions: {all_questions}')
             question_labels = extract_questions()
+            print(f'question labels: {question_labels}')
+            legend_questions = extract_legend_questions()
+            print(f'legend questions: {legend_questions}')
             questions = [label.text for label in question_labels]
+            print(f'questions: {questions}')
             # if there are no questions method returns no questions to apply function.
             if len(questions) == 0:
                 close()
                 print("no questions found with those selectors")
                 return False
             print(f'questions: {questions}')
-            save_questions(questions, all_questions)
+            save_questions(questions, all_questions, legend_questions)
             answer_questions(all_questions)
             return True
             # text_inputs = find_inputs("text")

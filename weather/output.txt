@@ -1,4 +1,16 @@
-2023-11-25 22:54:06.222157 Rain report
+2023-12-03 13:52:16.944913 Rain report
 ____________________
+Rain at 2023-12-03 16:00:00 with 93.0% chance
+ Description: moderate rain ☔️
+Rain at 2023-12-03 20:00:00 with 70.0% chance
+ Description: light rain ☔️
+Rain at 2023-12-03 21:00:00 with 100% chance
+ Description: moderate rain ☔️
+Rain at 2023-12-03 22:00:00 with 100% chance
+ Description: moderate rain ☔️
+Rain at 2023-12-03 23:00:00 with 100% chance
+ Description: light rain ☔️
+Rain at 2023-12-04 00:00:00 with 100% chance
+ Description: light rain ☔️
 _______________
-2023-11-25 22:54:06.222157 End of rain report
+2023-12-03 13:52:16.944913 End of rain report
