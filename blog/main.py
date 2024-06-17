@@ -4,14 +4,24 @@ import requests
 
 app = Flask(__name__)
 
+r = requests.get("https://api.npoint.io/c790b4d5cab58020d391")
+DATA = r.json()
+
 @app.route('/')
 def home():
-    r = requests.get("https://api.npoint.io/c790b4d5cab58020d391")
-    data = r.json()
-    print(data)
+    return render_template("index.html", data=DATA)
+
+@app.route('/posts<int:id>')
+def get_post(id):
+    for blog in DATA:
+        if blog['id'] == id:
+            return render_template("post.html", blog=blog)
+        else:
+            return render_template("index.html", data=DATA)
 
 
-    return render_template("index.html", data=data)
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -18,8 +18,8 @@
 			<div class="content">
 				<div class="card">
 					<h2>{{blog.title}}</h2>
-					<p class="text">{{blog.body}}</p>
-					<a href="#">Read</a>
+					<p class="text">{{blog.subtitle}}</p>
+					<a href="{{ url_for('get_post', id=blog.id)}}">Read</a>
 				</div>
 			</div>
 			{% endfor %}
